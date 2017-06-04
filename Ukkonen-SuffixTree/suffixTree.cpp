@@ -270,7 +270,7 @@ void printAllEdges() {
 }
 
 
-int main () {
+/*int main () {
   cout << "Enter String" << endl;
   getline(cin, Input);
   // For aligning indices
@@ -307,4 +307,4 @@ int main () {
   cout << "Seeds are being imported right now." << endl;
   cout << "Adios!" << endl;
   return 0;
-}
+}*/
