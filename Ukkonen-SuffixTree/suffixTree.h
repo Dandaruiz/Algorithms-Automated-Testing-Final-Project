@@ -1,7 +1,6 @@
 #ifndef SUFFIXTREE_H
 #define SUFFIXTREE_H 
 
-#include "node.h"
 #include "edge.h"
 #include <iostream>
 
@@ -21,13 +20,22 @@ class suffixTree {
             rootNode(root),
             startIndex(start),
         endIndex(end) {};
+        
         // Real means that the suffix string ends at a node and thus the
         // remaining string on that edge would be an empty string.
         bool endReal() {return startIndex > endIndex;} 
         // Img means that the suffixTree of current string ends on an imaginary
         // node, which means in between an edge. 
         bool endImg() {return endIndex >= startIndex;} 
-        void migrateToClosestParent();
+        void migrateToClosestParent(string Input, Node* nodeArray,unordered_map <long, Edge> &hash);
+        //bool run(string text,string pattern);
+        //string randTextGen();
+        //string randPatternGen(string text);
+
+
+
+
+
 };
 
 #endif                                                                             

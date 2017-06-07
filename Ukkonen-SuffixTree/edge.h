@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "node.h"
+#include <unordered_map> // Required c++11 support.
 using namespace std;
 
 class Edge {
@@ -15,12 +16,12 @@ public:
     int startLabelIndex;
     int endLabelIndex;
     void printID ();
-    void insert ();
-    void remove ();
+    void insert (string Input,unordered_map <long, Edge> &hash);
+    void remove (string Input, unordered_map <long, Edge> &hash);
     // node is the starting node and c is the ASCII input char.
     // Static because I want to call it without using an instantiated object.
     static long returnHashKey(int node, int c);
-    static Edge findEdge(int node, int c);
+    static Edge findEdge(int node, int c, unordered_map <long, Edge> &hash);
     
     // Constructors.
     Edge () : startNode(-1) {};
