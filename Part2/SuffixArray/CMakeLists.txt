@@ -22,11 +22,10 @@ link_directories($ENV{GMOCK_HOME}/gtest/mybuild/)
 ##                   COMMENT "Running suffixArrayUnitTests" VERBATIM)
                    
 ########## Add unit tests. 
-########## add_executable(suffixArrayUnitTests suffixArrayUnitTest.cpp)
-########## target_link_libraries(suffixArrayUnitTests gtest)
-########## target_link_libraries(suffixArrayUnitTests pthread)
-########## target_link_libraries(suffixArrayUnitTests suffixTreeLib)
-########## add_custom_command(TARGET suffixArrayUnitTests
+add_executable(suffixArrayUnitTests suffixArrayUnitTest.cpp)
+target_link_libraries(suffixArrayUnitTests gtest)
+target_link_libraries(suffixArrayUnitTests pthread)
+target_link_libraries(suffixArrayUnitTests suffixTreeLib)
 ##########                    POST_BUILD
 ##########                    COMMAND suffixArrayUnitTests
 ##########                    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
